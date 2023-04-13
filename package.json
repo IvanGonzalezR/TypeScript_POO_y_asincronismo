@@ -1,0 +1,23 @@
+{
+  "name": "poo_y_asincronismo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanGonzalezR/TypeScript_POO_y_asincronismo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanGonzalezR/TypeScript_POO_y_asincronismo/issues"
+  },
+  "homepage": "https://github.com/IvanGonzalezR/TypeScript_POO_y_asincronismo#readme",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
