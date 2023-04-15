@@ -3,15 +3,15 @@ class MyDate {
   // Se pueden quitar los this modificando el constructor:
   // es obligatorio colocar el tipo de acceso (public or private)
   constructor(
-    public day: number = 22,
+    private _day: number = 22,
     public month: number = 1,
-    private year: number = 1994
+    public year: number = 1994
   ) {
 
   }
 
   printFormat(): string {
-    const day = this.addPadding(this.day);
+    const day = this.addPadding(this._day);
     const month = this.addPadding(this.month);
     return `${day}/${month}/${this.year}`;
   }
@@ -25,7 +25,7 @@ class MyDate {
 
   add(amount: number, type: 'days' | 'months' | 'years') {
     if (type === 'days') {
-      this.day += amount;
+      this._day += amount;
     } else if (type === 'months') {
       this.month += amount;
     } else {
@@ -33,15 +33,23 @@ class MyDate {
     }
   }
 
-  get getDay() {
-    return this.day;
+  get day() {
+    return this._day;
+  }
+
+  get isLeapYear(): boolean {
+    // code
+    if (this.year % 400 === 0) return true;
+    if (this.year % 100 === 0) return false;
+    return this.year % 4 === 0;
   }
 }
 
-const myDate = new MyDate();
+const myDate = new MyDate(25, 3, 2000);
 console.log(myDate.printFormat());
-const myDate2 = new MyDate(12);
-console.log(myDate2.printFormat());
+// myDate.day = 8;
+console.log(myDate.day);
+console.log(myDate.isLeapYear);
 
 
 export { }
