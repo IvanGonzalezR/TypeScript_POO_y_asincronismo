@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/IvanGonzalezR/TypeScript_POO_y_asincronismo#readme",
   "devDependencies": {
+    "faker-js": "^1.0.0",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "axios": "^1.3.5"
   }
 }
