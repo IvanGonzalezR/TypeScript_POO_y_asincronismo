@@ -19,7 +19,7 @@ class ProductHttpService implements ProductService {
     return data;
   }
   async findOne(id: Product[ 'id' ]) {
-    const { data } = await axios.post(`${this.url}/${id}`);
+    const { data } = await axios.get(`${this.url}/${id}`);
     return data;
   }
 
